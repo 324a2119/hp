@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Website</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #eab308;
+  --secondary: #ca8a04;
+  --accent: #fde047;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* pill shape */
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+article .text-6xl {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3));
+}
+
+button, .btn {
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover, .btn:hover {
+  background: var(--secondary);
+  color: white;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .section {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+  }
+
+  .section h3 {
+    font-size: 1.8rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  article .text-6xl {
+    font-size: 3.5rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+<header class="py-4 px-6 md:px-12 flex justify-between items-center">
+    <h1 class="text-3xl font-bold">オカダ・カズチカの趣味</h1>
+    <nav>
+        <ul class="flex space-x-6">
+            <li><a href="#intro" class="hover:text-accent transition-colors">紹介</a></li>
+            <li><a href="#hobbies" class="hover:text-accent transition-colors">趣味一覧</a></li>
+            <li><a href="#conclusion" class="hover:text-accent transition-colors">まとめ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container mx-auto py-8 px-4 md:px-0">
+    <section id="intro" class="section p-8 md:p-12 rounded-lg shadow-xl mb-12 text-center">
+        <h2 class="text-4xl font-extrabold mb-6">プロレス界のスーパースター、オカダ・カズチカ</h2>
+        <p class="text-lg leading-relaxed">プロレス界のスーパースター、オカダ・カズチカは、リング上での華麗なパフォーマンスと圧倒的な強さで多くのファンを魅了しています。しかし、そのリング外での素顔、特に趣味についてはあまり知られていないかもしれません。彼は多岐にわたる趣味を持ち、それらが彼の人間性を豊かにし、プロレスラーとしての魅力にも繋がっていると考えられます。</p>
+    </section>
+
+    <section id="hobbies" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+        <article class="section p-6 rounded-lg shadow-xl flex flex-col items-center text-center">
+            <div class="text-6xl mb-4">🎮</div>
+            <h3 class="text-2xl font-bold mb-3">ゲーム</h3>
+            <p class="text-md leading-relaxed">ゲームは、オカダ・カズチカが公言している趣味の一つです。彼はかなりのゲーマーであり、特に人気RPGやアクションゲームを好むことが知られています。遠征先での移動時間やオフの日には、しばしばゲームに興じていると語っています。ゲームを通じて得られる集中力や戦略的な思考は、プロレスの試合運びにも活かされている可能性があります。また、ゲームという共通の趣味を持つことで、ファンとのコミュニケーションの機会が生まれることもあります。</p>
+        </article>
+
+        <article class="section p-6 rounded-lg shadow-xl flex flex-col items-center text-center">
+            <div class="text-6xl mb-4">🎣</div>
+            <h3 class="text-2xl font-bold mb-3">釣り</h3>
+            <p class="text-md leading-relaxed">彼はまた、釣りも愛する趣味として挙げています。特にバスフィッシングに熱中しており、その様子を自身のSNSで披露することもあります。大自然の中で集中し、魚との駆け引きを楽しむ時間は、プロレスラーとして常にプレッシャーに晒されている彼にとって、貴重なリフレッシュの時間となっているでしょう。釣りの成果に一喜一憂する姿は、リング上のクールなイメージとは異なる、人間味あふれる一面を見せてくれます。</p>
+        </article>
+
+        <article class="section p-6 rounded-lg shadow-xl flex flex-col items-center text-center">
+            <div class="text-6xl mb-4">🍳</div>
+            <h3 class="text-2xl font-bold mb-3">料理</h3>
+            <p class="text-md leading-relaxed">さらに、彼は料理にも興味を持っているようです。多忙なスケジュールの中で自炊する機会は限られているかもしれませんが、食へのこだわりや、健康的な体作りへの意識の高さが伺えます。時にSNSで手料理の写真をアップすることがあり、その料理の腕前もファンの間で話題になることがあります。</p>
+        </article>
+
+        <article class="section p-6 rounded-lg shadow-xl flex flex-col items-center text-center">
+            <div class="text-6xl mb-4">👕</div>
+            <h3 class="text-2xl font-bold mb-3">ファッション</h3>
+            <p class="text-md leading-relaxed">これらの趣味に加えて、ファッションへの関心も高いことで知られています。リング入場時のコスチュームはもちろんのこと、プライベートでの服装も常に洗練されており、ファッションアイコンとしての側面も持ち合わせています。最新のトレンドを取り入れつつ、自身のスタイルを確立している点は、まさに「レインメーカー」という彼のニックネームにふさわしい、華やかさを追求する姿勢の表れと言えるでしょう。</p>
+        </article>
+
+        <article class="section p-6 rounded-lg shadow-xl flex flex-col items-center text-center">
+            <div class="text-6xl mb-4">🎬</div>
+            <h3 class="text-2xl font-bold mb-3">YouTuber</h3>
+            <p class="text-md leading-relaxed">また、オカダ・カズチカは自身のプロモーション活動にも積極的であり、YouTuberとしての顔も持っています。自身のYouTubeチャンネルでは、トレーニング風景やオフショット、趣味に関する動画などを公開しており、ファンに自身の素顔をより身近に感じてもらう機会を提供しています。これは、彼の持つ表現欲求と、ファンサービスへの意識の高さを示しています。</p>
+        </article>
+    </section>
+
+    <section id="conclusion" class="section p-8 md:p-12 rounded-lg shadow-xl text-center">
+        <h2 class="text-3xl font-extrabold mb-6">魅力の源泉</h2>
+        <p class="text-lg leading-relaxed">このように、オカダ・カズチカの趣味は多岐にわたります。ゲームや釣りといったレクリエーションから、料理、ファッション、そして自身の表現活動に至るまで、それぞれの趣味が彼の人間性を形成し、リング上でのパフォーマンスやプロレスラーとしてのカリスマ性にも奥行きを与えていると言えるでしょう。彼の多彩な趣味は、単なる気晴らしに留まらず、彼をより魅力的な人物として輝かせている重要な要素なのです。</p>
+        <button class="mt-8 btn inline-block">さらに詳しく知る</button>
+    </section>
+</main>
+
+<footer class="py-6 px-4 md:px-12 text-center text-sm bg-black bg-opacity-30 backdrop-filter backdrop-blur-md mt-12">
+    <p>&copy; 2023 オカダ・カズチカ ファンサイト. All rights reserved.</p>
+</footer>
+
+  <script>
+
+  </script>
+</body>
+</html>
