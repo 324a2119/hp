@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Website</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #eab308;
+  --secondary: #ca8a04;
+  --accent: #fde047;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: white;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+button, .btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+h1, h2, h3 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+a {
+  color: var(--accent);
+}
+
+body {
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.max-w-6xl {
+    max-width: 1200px;
+}
+
+.max-w-4xl {
+    max-width: 900px;
+}
+
+.max-w-3xl {
+    max-width: 700px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.pb-12 {
+    padding-bottom: 3rem;
+}
+
+.pt-24 {
+    padding-top: 6rem;
+}
+
+.pt-12 {
+    padding-top: 3rem;
+}
+
+.pt-8 {
+    padding-top: 2rem;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.space-x-6 > *:not(:first-child) {
+    margin-left: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.text-5xl {
+    font-size: 3rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em;
+}
+
+.leading-tight {
+    line-height: 1.25;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
+.opacity-80 {
+    opacity: 0.8;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.border {
+    border-width: 1px;
+}
+
+.border-white {
+    border-color: white;
+}
+
+.border-opacity-20 {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.transition-colors {
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.text-6xl {
+    font-size: 3.75rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .md\:text-left {
+        text-align: left;
+    }
+    .md\:flex-row {
+        flex-direction: row;
+    }
+}
+
+/* Custom hero section styling */
+.hero-section {
+    padding-top: calc(5rem + 80px); /* Adjust for fixed header height */
+    padding-bottom: 5rem;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.8) 0%, rgba(var(--secondary-rgb), 0.8) 100%), 
+                url('https://via.placeholder.com/1500x800.png?text=Okada+Kazuchika+Hero') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 0;
+    backdrop-filter: none;
+    position: relative;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+.hero-section h2, .hero-section p {
+  position: relative;
+  z-index: 2;
+}
+
+:root {
+  --primary-rgb: 234, 179, 8;
+  --secondary-rgb: 202, 138, 4;
+  --accent-rgb: 253, 224, 71;
+}
+  </style>
+</head>
+<body>
+<header class="py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+    <h1 class="text-3xl font-bold tracking-wider">オカダ・カズチカ 👑</h1>
+    <nav>
+        <ul class="flex space-x-6">
+            <li><a href="#intro" class="hover:text-accent transition-colors">はじめに</a></li>
+            <li><a href="#records" class="hover:text-accent transition-colors">記録</a></li>
+            <li><a href="#rivalries" class="hover:text-accent transition-colors">ライバル</a></li>
+            <li><a href="#g1" class="hover:text-accent transition-colors">G1クライマックス</a></li>
+            <li><a href="#transfer" class="hover:text-accent transition-colors">移籍</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="pt-24 pb-12">
+    <section id="hero" class="section hero-section text-center py-20 px-6 mb-12">
+        <h2 class="text-5xl font-extrabold mb-4 leading-tight">オカダ・カズチカの伝説5選 ✨</h2>
+        <p class="text-xl max-w-3xl mx-auto opacity-90">オカダ・カズチカは、新日本プロレスを代表するスーパースターであり、「レインメーカー」の異名を持つカリスマ的存在です。彼のキャリアには数々の伝説的な瞬間があり、プロレス史にその名を刻んでいます。ここでは、彼の偉大な功績の中から特に印象的な5つの伝説を紹介します。</p>
+    </section>
+
+    <section id="records" class="py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="card p-8 rounded-xl shadow-lg border border-white border-opacity-20 flex flex-col items-center text-center">
+                <span class="text-6xl mb-4">🏆</span>
+                <h3 class="text-3xl font-bold mb-4">1. 史上最年少IWGPヘビー級王座戴冠</h3>
+                <p class="text-lg opacity-90">オカダ・カズチカの伝説の始まりは、2012年2月12日、棚橋弘至からIWGPヘビー級王座を奪取したことにあります。当時24歳と10ヶ月での戴冠は、IWGPヘビー級王座史上最年少記録であり、プロレス界に衝撃を与えました。凱旋帰国後、すぐさま新日本のエースを破り、その才能とカリスマ性を世に知らしめた瞬間でした。この勝利が、「レインメーカー」伝説の序章となったことは間違いありません。</p>
+            </div>
+            <div class="card p-8 rounded-xl shadow-lg border border-white border-opacity-20 flex flex-col items-center text-center">
+                <span class="text-6xl mb-4">🥇</span>
+                <h3 class="text-3xl font-bold mb-4">2. IWGPヘビー級王座史上最長保持記録と防衛記録</h3>
+                <p class="text-lg opacity-90">オカダ・カズチカは、2016年6月19日に内藤哲也からIWGPヘビー級王座を奪取して以来、720日という史上最長保持記録を樹立しました。この間、12回という史上最多防衛記録も同時に達成しており、彼の強さと安定感を象徴する偉業となりました。この長期政権は、新日本プロレスの黄金時代を牽引し、多くのファンを熱狂させました。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rivalries" class="py-16 px-6">
+        <div class="max-w-4xl mx-auto card p-8 rounded-xl shadow-lg border border-white border-opacity-20 text-center">
+            <span class="text-6xl mb-4">💥</span>
+            <h3 class="text-3xl font-bold mb-4">3. ケニー・オメガとの伝説的な抗争</h3>
+            <p class="text-lg opacity-90">2017年から2018年にかけて繰り広げられたケニー・オメガとのIWGPヘビー級選手権試合は、プロレス史に残る名勝負として語り継がれています。特に2017年1月4日東京ドーム大会での初対決、そして2018年6月9日大阪城ホール大会での決着戦は、試合内容、観客の熱狂、そしてプロレス界への影響という点で、まさに伝説的と呼ぶにふさわしいものでした。両者の激しい攻防は、多くの専門家やファンから「史上最高の試合」と評され、世界中のプロレスファンを魅了しました。</p>
+        </div>
+    </section>
+
+    <section id="g1" class="py-16 px-6">
+        <div class="max-w-4xl mx-auto card p-8 rounded-xl shadow-lg border border-white border-opacity-20 text-center">
+            <span class="text-6xl mb-4">🥇</span>
+            <h3 class="text-3xl font-bold mb-4">4. G1クライマックス史上初の快挙 G1全勝優勝</h3>
+            <p class="text-lg opacity-90">2024年のG1クライマックスにおいて、オカダ・カズチカは史上初の開幕から全勝で優勝するという偉業を達成しました。G1クライマックスの過酷なリーグ戦を無敗で勝ち抜き、さらに決勝でも勝利するというとてつもない強さを見せつけました。この全勝優勝は、彼の圧倒的な実力と精神力の強さを改めて証明するものであり、プロレス界に新たな歴史を刻みました。</p>
+        </div>
+    </section>
+
+    <section id="transfer" class="py-16 px-6">
+        <div class="max-w-4xl mx-auto card p-8 rounded-xl shadow-lg border border-white border-opacity-20 text-center">
+            <span class="text-6xl mb-4">✈️</span>
+            <h3 class="text-3xl font-bold mb-4">5. 新日本プロレスからの電撃移籍</h3>
+            <p class="text-lg opacity-90">2024年1月、オカダ・カズチカは新日本プロレスからの退団を発表し、その後のAEW移籍が決定しました。この電撃的な移籍は、日本のプロレス界のみならず、世界のプロレス界全体に大きな衝撃を与えました。新日本プロレスの絶対的エースであった彼が新たな挑戦を選んだことは、彼のキャリアにおいて大きな転換点であり、今後のプロレス界の動きにも大きな影響を与える出来事として、彼の伝説の一つに数えられるでしょう。</p>
+        </div>
+    </section>
+
+    <section id="conclusion" class="section text-center py-20 px-6 mt-12">
+        <h3 class="text-4xl font-bold mb-6">レインメーカーの物語は続く… 🌟</h3>
+        <p class="text-xl max-w-3xl mx-auto opacity-90">オカダ・カズチカの伝説は、その卓越したレスリング技術、カリスマ性、そして常に高みを目指す姿勢によって築かれました。彼のキャリアはこれからも続き、さらなる伝説が生まれることを多くのファンが期待しています。</p>
+        <button class="btn mt-8">未来の伝説を見届けよう！</button>
+    </section>
+</main>
+
+<footer class="py-8 px-6 text-center opacity-80">
+    <p>© 2024 オカダ・カズチカ 伝説の記録. All rights reserved.</p>
+</footer>
+
+  <script>
+
+  </script>
+</body>
+</html>
