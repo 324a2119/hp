@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Website</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary: #eab308;
+    --secondary: #ca8a04;
+    --accent: #fde047;
+  }
+
+  body {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: white;
+    line-height: 1.6;
+  }
+
+  header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  button, .btn {
+    background: var(--accent);
+    color: #333;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+
+  button:hover, .btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    color: white;
+  }
+
+  h1, h2, h3 {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--secondary);
+  }
+
+  .container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+  }
+
+  /* Tailwind-like utilities for better readability */
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .p-4 { padding: 1rem; }
+  .p-6 { padding: 1.5rem; }
+  .p-8 { padding: 2rem; }
+  .mt-12 { margin-top: 3rem; }
+  .mb-2 { margin-bottom: 0.5rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  .mt-6 { margin-top: 1.5rem; }
+  .text-center { text-align: center; }
+  .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1); }
+  .shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .rounded-xl { border-radius: 0.75rem; }
+  .text-4xl { font-size: 2.25rem; }
+  .text-5xl { font-size: 3rem; }
+  .text-3xl { font-size: 1.875rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-lg { font-size: 1.125rem; }
+  .text-sm { font-size: 0.875rem; }
+  .text-xs { font-size: 0.75rem; }
+  .font-bold { font-weight: 700; }
+  .opacity-90 { opacity: 0.9; }
+  .opacity-80 { opacity: 0.8; }
+  .opacity-70 { opacity: 0.7; }
+  .flex { display: flex; }
+  .items-center { align-items: center; }
+  .mr-3 { margin-right: 0.75rem; }
+  .space-y-12 > :not([hidden]) ~ :not([hidden]) { margin-top: 3rem; }
+
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    .text-5xl {
+      font-size: 4rem;
+    }
+    .section {
+      padding: 3rem;
+    }
+  }
+
+  footer {
+    background: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
+    padding: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  </style>
+</head>
+<body>
+  <header class="p-4 shadow-lg text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-2">オカダ・カズチカの得意技 👑</h1>
+    <p class="text-lg opacity-90">新日本プロレスを代表するトップレスラー、オカダ・カズチカの必殺技を徹底解説。</p>
+  </header>
+
+  <main class="container mx-auto p-6 md:p-8 space-y-12">
+    <section class="section p-6 md:p-8 rounded-xl shadow-lg">
+      <p class="text-white leading-relaxed">
+        オカダ・カズチカは、新日本プロレスを代表するトップレスラーであり、その洗練されたファイトスタイルと強力な得意技は、数多くのファンを魅了してきました。彼の得意技は、単なる派手な技ではなく、試合の流れを完全に支配し、相手を確実に仕留めるための戦略的な要素を多分に含んでいます。その中でも特に著名なものをいくつか紹介します。
+      </p>
+    </section>
+
+    <section class="section p-6 md:p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center">
+        <span class="mr-3 text-accent">✨</span>レインメーカー
+      </h2>
+      <p class="text-white leading-relaxed mb-4">
+        オカダの代名詞ともいえるフィニッシュホールドが、このレインメーカーです。相手をリストクラッチで捕らえ、その腕を離さずに回転軸にして、自らの体を大きく振り子のように振って相手の頭部を叩きつけるラリアットです。この技の特筆すべき点は、単にラリアットとして威力が高いだけでなく、リストクラッチによって相手の体勢を崩し、その後の動きを封じながら放たれる点にあります。これにより、相手は防御態勢を取ることが非常に困難となり、一撃で試合を決めることが可能になります。また、相手が起き上がろうとする瞬間や反撃しようとする意図を読み取り、そのわずかな隙を突いてリストクラッチに持ち込むため、非常に高い状況判断能力と技術が要求される技でもあります。彼の試合において、レインメーカーが放たれる瞬間は、会場のボルテージが最高潮に達する瞬間でもあります。
+      </p>
+      <button class="btn">詳細を見る</button>
+    </section>
+
+    <section class="section p-6 md:p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center">
+        <span class="mr-3 text-accent">🚀</span>ドロップキック
+      </h2>
+      <p class="text-white leading-relaxed mb-4">
+        一見すると地味な技に見えますが、オカダの放つドロップキックは、その美しさと威力において他の追随を許しません。滞空時間が長く、相手の顔面や胸板に綺麗にヒットさせる精度は芸術的な域に達しています。このドロップキックは、相手の攻撃を切るためのカウンターや、自分のペースに引き込むための繋ぎ技として非常に有効です。身体能力の高さと体幹の強さがなければ、あの高さと姿勢を保つことはできません。彼のドロップキックは、単なる繋ぎ技ではなく、試合の流れを一変させる可能性を秘めた重要な技でもあります。
+      </p>
+      <button class="btn">驚異の高さ</button>
+    </section>
+
+    <section class="section p-6 md:p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center">
+        <span class="mr-3 text-accent">⚰️</span>ツームストン・パイルドライバー
+      </h2>
+      <p class="text-white leading-relaxed mb-4">
+        もともとはアメリカンプロレスで使われてきた危険技で、相手を逆さに抱えて頭からマットに突き刺すパイルドライバー系の技です。
+        オカダ・カズチカが使うツームストンは、クラシカルな形をベースにしつつ、スピード、安定感、演出性の三拍子が完璧に揃っています。
+        主にレインメーカーの前段階（布石）として使用。この技を決めてからレインメーカーを狙う流れが、ファンの間では“勝利の方程式”として定着しています。
+      </p>
+      <button class="btn">勝利の方程式</button>
+    </section>
+
+    <section class="section p-6 md:p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center">
+        <span class="mr-3 text-accent">🌧️</span>ヘビーレイン
+      </h2>
+      <p class="text-white leading-relaxed mb-4">
+        ジャーマンスープレックスとは異なるタイプのフィニッシュムーブとして、相手を肩に担ぎ上げてから叩きつけるヘビーレインも、彼の得意技の一つです。これは、相手へのダメージを蓄積させるというよりも、文字通り相手をマットに叩きつけて動きを封じることに重点が置かれています。レインメーカーへの繋ぎとしても使われることがありますが、単発でのフィニッシュも十分に狙える強力な技です。
+      </p>
+      <button class="btn">叩きつけの美学</button>
+    </section>
+
+    <section class="section p-6 md:p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center">
+        <span class="mr-3 text-accent">🌀</span>リバースネックブリーカー
+      </h2>
+      <p class="text-white leading-relaxed mb-4">
+        通常のネックブリーカー（首折り落とし）は、相手の頭を抱えた状態から後ろ向きに倒れ込み、相手の首を打ち付ける技です。
+        「リバース・ネックブリーカー」はその派生形で、相手を自分の背後で持ち上げ、落としながら首に衝撃を与える技。
+        つまり、相手の体を自分の肩の後ろで反転させるようにして落とします。
+        相手の動きを鈍らせ、次の大技（ツームストンやレインメーカー）に繋げる。
+        技後に静止して「間」を取ることで、観客の緊張感を高める演出効果もある。
+      </p>
+      <button class="btn">戦略的ネックブリーカー</button>
+    </section>
+
+    <section class="section p-6 md:p-8 rounded-xl shadow-lg text-center">
+      <p class="text-white text-xl leading-relaxed">
+        これらの技は、それぞれが単独で強力なだけでなく、お互いに連携し合うことで、より一層その威力を増します。オカダ・カズチカの試合運びは、これらの得意技をいかに効果的に、そして戦略的に組み合わせるかという点に集約されています。彼の得意技は、彼のプロレスラーとしての完成度の高さを象徴するものと言えるでしょう。
+      </p>
+      
+    </section>
+  </main>
+
+  <footer class="bg-gradient-to-t from-primary to-secondary text-center p-4 mt-12 shadow-inner">
+    <p class="text-sm opacity-80">&copy; 2023 Okada Kazuchika Fan Site. All rights reserved.</p>
+    <p class="text-xs mt-2 opacity-70">Powered by Professional Web Designer & Developer</p>
+  </footer>
+
+  <script>
+
+  </script>
+</body>
+</html>
