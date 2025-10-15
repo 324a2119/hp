@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Website</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #eab308;
+  --secondary: #ca8a04;
+  --accent: #fde047;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: white;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+button, .btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover, .btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+h1, h2, h3 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar .brand {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--accent);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: bold;
+    font-size: 1.05em;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent);
+    transition: width 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.footer-section {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .section {
+        margin: 30px auto;
+        padding: 30px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.5em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    button, .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+  </style>
+</head>
+<body>
+<header class="container header-section">
+    <nav class="navbar">
+        <div class="brand">オカダ・カズチカ</div>
+        <ul class="nav-links">
+            <li><a href="#intro">紹介</a></li>
+            <li><a href="#playstyle">プレイスタイル</a></li>
+            <li><a href="#psychological">心理戦</a></li>
+            <li><a href="#professionalism">プロ意識</a></li>
+            <li><a href="#charisma">カリスマ性</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>レインメーカーオカダ・カズチカのすごさ</h1>
+        <p>新日本プロレスにおける絶対的なエースとして、その圧倒的な存在感と驚異的なカリスマ性で多くのファンを魅了してきました。</p>
+        <button class="btn">彼の伝説をさらに知る</button>
+    </div>
+</header>
+
+<main>
+    <section id="intro" class="section container fade-in">
+        <h2>導入</h2>
+        <p>オカダ・カズチカは、新日本プロレスにおける絶対的なエースとして、その圧倒的な存在感と驚異的なカリスマ性で多くのファンを魅了してきました。彼の「すごさ」は、単なる強さだけに留まらず、プロレスラーとして、そして一人の人間としての多面的な魅力に集約されます。</p>
+    </section>
+
+    <section id="playstyle" class="section container fade-in">
+        <h2>プレイスタイルの完成度</h2>
+        <div class="card">
+            <p>まず、彼のプレイスタイルの完成度が挙げられます。オカダのレスリングは、基本に忠実でありながら、洗練された技術と創造性が見事に融合しています。誰もが認める必殺技であるレインメーカーは、その説得力と美しさから「どんなに劣勢でも一発でひっくり返せる」というドラマを生み出し続けました。ドロップキック一つにしても、その高さ、打点、美しさは芸術的と形容され、彼の試合はまさに「魅せるプロレス」の極致と言えるでしょう。相手の技を受けきり、耐え忍び、ここぞという時に爆発的な反撃に出る構成力は、試合を単なる攻防ではなく、一つの壮大なストーリーへと昇華させます。</p>
+        </div>
+    </section>
+
+    <section id="psychological" class="section container fade-in">
+        <h2>心理戦の巧みさ</h2>
+        <div class="card">
+            <p>次に、彼の心理戦の巧みさも特筆すべき点です。オカダは、試合中はもちろん、マイクパフォーマンスやインタビューにおいても、常に相手の心理を読み、自身の立ち位置を明確にすることで、観客の感情を深く揺さぶります。自信に満ち溢れた表情、時に見せる不敵な笑み、そして王者としての重みを感じさせる威厳ある佇まい。これら全てが、彼のキャラクターをより一層際立たせ、見る者を物語の中に引き込みます。</p>
+        </div>
+    </section>
+
+    <section id="professionalism" class="section container fade-in">
+        <h2>プロフェッショナルとしての徹底ぶり</h2>
+        <div class="card">
+            <p>さらに、プロフェッショナルとしての徹底ぶりも彼のすごさを物語っています。常に体調を万全に保ち、どんな試合においても最高のパフォーマンスを発揮しようとするストイックな姿勢は、新日本プロレスのエースとしての責任感を強く感じさせます。彼は、自身の勝利や団体の発展だけでなく、プロレス界全体の盛り上がりを常に意識しており、その視野の広さとプロ意識の高さは、多くの後輩レスラーたちの模範となってきました。</p>
+        </div>
+    </section>
+
+    <section id="charisma" class="section container fade-in">
+        <h2>カリスマ性</h2>
+        <div class="card">
+            <p>そして、彼のカリスマ性は、単にリング上での強さだけでなく、オフリングでの振る舞いにも表れています。どんな時でも堂々としており、自信に満ちたオーラを放つ一方で、ファンに対しては感謝の気持ちを忘れず、丁寧な対応を心がける謙虚さも持ち合わせています。このギャップが、彼をより人間味あふれる存在として、多くのファンから愛される理由の一つとなっています。</p>
+        </div>
+    </section>
+
+    <section class="section container fade-in">
+        <h2>まとめ</h2>
+        <p>オカダ・カズチカは、その卓越したレスリング技術、計算し尽くされた心理戦、プロフェッショナルとしての姿勢、そして圧倒的なカリスマ性によって、新日本プロレスの黄金時代を築き上げてきました。彼は単なるレスラーではなく、プロレスというエンターテインメントを最高峰に押し上げる「レインメーカー」として、今後も伝説として語り継がれる存在であり続けるでしょう。</p>
+        <button class="btn">彼の試合を見る</button>
+    </section>
+</main>
+
+<footer class="footer-section">
+    <p>&copy; 2023 レインメーカー オカダ・カズチカ. 全ての権利を保有します。</p>
+</footer>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.fade-in');
+
+    const options = {
+        root: null, // viewport
+        threshold: 0.1, // 10% visible
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+  </script>
+</body>
+</html>
